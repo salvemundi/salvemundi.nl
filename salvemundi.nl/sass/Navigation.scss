@@ -1,0 +1,134 @@
+
+
+header{
+    background-color: #663366;
+    z-index: 99;
+    width: 100%;
+    position: fixed;
+    transition: .5s ease all;
+    color: white;
+}
+
+header nav{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    transition: .5s ease all;
+    widows: 90%;
+    margin: 0, auto;
+    @media (min-width: 1140px) {
+        max-width: 1140px;
+    }
+}
+
+header nav ul,
+header nav link{
+    color: white;
+    list-style: none;
+    text-decoration: none;
+}
+
+header nav li{
+    padding: 16px;
+}
+
+header nav a{
+    transition: .5 ease all;
+    padding-bottom: 4px;
+    border-bottom: 1px solid transparent;
+
+    &:hover{
+        color: plum;
+        border-color: plum;
+    }
+}
+
+header nav .branding{
+    display: flex;
+    align-items: center;
+    margin: 16px;
+    transition: .5s ease all;
+}
+
+
+.branding img{
+    width: 5em;
+    transition: .5 ease all;
+}
+
+.navigation{
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.nav-start{
+    justify-content: flex-start;
+    display: flex;
+    flex: 1;
+}
+
+.nav-end{
+    justify-content: flex-end;
+    display: flex;
+    flex: 1;
+
+}
+
+.icon{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 2em;
+    height: 100%;
+}
+
+.icon i{
+    cursor: pointer;
+    transition: 0.8s ease all;
+    transform: rotate(0deg);
+}
+
+.icon-active{
+    transition: 0.8s ease all;
+    transform: rotate(180deg);
+}
+
+.dropdown-nav{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    max-width: 250px;
+    height: 100%;
+    background-color: #39203B;
+    top: 0;
+    left: 0;
+}
+
+.dropdown-nav li{
+    margin-left: 0;
+}
+
+.mobile-nav-enter-active,
+.mobile-nav-leave-active{
+    transition: 1s ease all;
+}
+
+.mobile-nav-enter-from,
+.mobile-nav-leave-to{
+    transition: 1s ease all;
+    transform: translateX(-250px);
+}
+
+.mobile-nav-enter-to{
+    transition: 1s ease all;
+    transform: translateX(0);;
+}
+
+
+.scrolled-nav img{
+    width: 3.5em;
+    transition: .5s ease all;
+}

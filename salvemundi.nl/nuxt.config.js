@@ -6,7 +6,7 @@ export default {
   head: {
     title: 'salvemundi.nl',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'nl'
     },
     meta: [
       { charset: 'utf-8' },
@@ -36,7 +36,17 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/fontawesome',
   ],
+
+  fontawesome: {
+    component: 'Fa',
+    suffix: false,
+    icons: {
+      solid: true,
+      brands: true,
+    },
+},
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
