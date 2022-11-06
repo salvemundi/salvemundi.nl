@@ -19,7 +19,7 @@
       </b-col>
     </b-row>
 
-    <b-row class="video-purple my-5 p-3">
+    <b-row class="video-purple mt-5 p-3">
       <b-col class="px-2 d-flex justify-content-center order-2 order-md-1 col-12 col-md-6">
         <video class="video mx-auto my-4" controls muted autoplay>
           <source src="../assets/videos/SalveMundiAftermovie.mp4" type="video/mp4">
@@ -30,6 +30,26 @@
         <h2 class="portico bigger" style="width:100%;">Maak kennis met Salve Mundi!</h2>
       </b-col>
     </b-row>
+
+    <div class="intro-heigt">
+      <div class="overlay">
+        <div class="p-5S box">
+          <h2 class="portico">Introductie</h2>
+          <p>
+            Ga jij bij Fontys ICT studeren? En ben jij op zoek naar het echte studentenleven in Eindhoven? Dan is de introductie misschien wel iets voor jou!
+          </p>
+          <p>
+            Salve Mundi organiseert jaarlijks een introductieweek: De FHICT-introductie. Het is een week vol avontuur en teambuilding in Eindhoven en omstreken. Zo leer je ook de stad beter kennen. Salve Mundi is druk bezig geweest om dit allemaal mogelijk te maken voor de nieuwe studenten dit jaar.
+          </p>
+          <div>
+            <a href="btn btn-primary">Meer informatie -></a>
+          </div>
+        </div>
+      </div>
+      <img class="intro-foto" src="../assets/img/IntroFoto.jpg" alt="">
+
+    </div>
+
     <TitleBlock Title="Commissies" Content="bla bla bla text enzo"></TitleBlock>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aut asperiores error impedit, architecto excepturi quod est. Nostrum, eaque atque commodi sit nesciunt minima veritatis, enim eius a eligendi hic?
     
@@ -79,6 +99,26 @@ video{
 
 .bigger{
   font-size: 200%;
+}
+
+.intro-foto{
+  object-fit: cover;
+  width: 100%;
+  height: 40em;
+}
+
+.intro-height{
+  height: 40em;
+}
+
+.intro-height .overlay{
+  height: 40em !important;
+}
+
+.box{
+  background-color: white;
+  z-index: 4;
+  margin: 10em;
 }
 
 </style>

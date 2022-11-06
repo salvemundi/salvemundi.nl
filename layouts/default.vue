@@ -40,7 +40,7 @@ export default {
 }
 
 body{
-    font-family: "Century gothic";
+    font-family: "Century gothic",serif;
 }
 
 #navigationIcon{
