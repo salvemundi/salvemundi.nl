@@ -15,7 +15,10 @@
           <li><a href="#">Merch</a></li>
         </div>
         <div class="nav-end">
-          <li><a href="#">Login</a></li>
+          <li>
+            <a v-if="!this.$auth.loggedIn" @click="$auth.loginWith('aad')">Log in</a>
+            <a v-else="" @click="$auth.logout('aad')">Log uit</a>
+          </li>
         </div>
       </ul>
       <div class="icon">

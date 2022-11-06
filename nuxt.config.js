@@ -35,9 +35,53 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
+    '@nuxtjs/axios',
+    '@nuxtjs/auth-next',
   ],
+
+  axios: {
+    baseURL: '/'
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+
+  router: {
+    middleware: ['auth']
+  },
+
+  auth: {
+    redirect: {
+      login: '/',
+      callback: '/callback'
+    },
+    strategies: {
+      aad: {
+        scheme: 'oauth2',
+        endpoints: {
+          authorization: 'https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize',
+          token: 'https://login.microsoftonline.com/organizations/oauth2/v2.0/token',
+          userInfo: '',
+          logout: '/'
+        },
+        token: {
+          property: 'access_token',
+          type: 'Bearer',
+          maxAge: 1800
+        },
+        refreshToken: {
+          property: 'refresh_token',
+          maxAge: 60 * 60 * 24 * 30
+        },
+        responseType: 'code',
+        grantType: 'authorization_code',
+        accessType: 'offline',
+        clientId: process.env.CLIENT_APP_ID,
+        codeChallengeMethod: 'S256',
+        scope: ['openid', 'profile'],
+        autoLogout: true
+      }
+    }
   }
 }
