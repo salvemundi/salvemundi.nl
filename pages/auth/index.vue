@@ -7,9 +7,9 @@
 // eslint-disable-next-line camelcase
 import jwt_decode from 'jwt-decode'
 export default {
-  mounted () {
-    const decodedBearer = jwt_decode(this.$auth.$storage.getUniversal('_token.aad'))
-    this.$auth.$storage.setUniversal('jwt_decoded', decodedBearer)
-  }
+  // mounted () {
+  //   const decodedBearer = jwt_decode(this.$auth.$storage.getUniversal('_token.aad'))
+  //   this.$auth.$storage.setUniversal('jwt_decoded', decodedBearer)
+  // }
 }
 </script>

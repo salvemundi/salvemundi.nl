@@ -3,7 +3,7 @@
     <NextActivity />
     <b-row class="mx-5 my-3">
       <b-col>
-        <h1 class="portico text-purple" v-if="jwt_decoded != null">Welkom {{ jwt_decoded.name }}!</h1>
+        <h1 class="portico text-purple" v-if="jwt.length > 1">Welkom {{ decodedToken(jwt).name }}!</h1>
 
         <h2 class="portico text-purple">Over ons</h2>
         <p><b>
@@ -63,6 +63,7 @@
 // import { component } from 'vue/types/umd';
 import TitleBlock from '../components/TitleBlock.vue';
 import NextActivity from '../components/NextActivity.vue';
+import jwt_decode from 'jwt-decode'
 
 export default {
   components:{
@@ -71,11 +72,18 @@ export default {
   },
   asyncData (context) {
     return {
-      jwt_decoded: context.app.$auth.$storage.getUniversal('jwt_decoded')
+      jwt: context.app.$auth.$storage.getUniversal('_token.aad')
     }
   },
   data () {
-    return { jwt_decoded: null }
+    return { jwt: null }
+  },
+  methods: {
+    decodedToken(jwt) {
+      if(jwt.length > 1) {
+        return jwt_decode(jwt)
+      }
+    }
   },
   head() {
     return {
