@@ -3,7 +3,7 @@
     <NextActivity />
     <b-row class="mx-5 my-3">
       <b-col>
-        <h1 class="portico text-purple" v-if="jwt.length > 1">Welkom {{ decodedToken(jwt).name }}!</h1>
+        <h1 class="portico text-purple" v-if="jwt != null && jwt.length > 1">Welkom {{ decodedToken(jwt).name }}!</h1>
 
         <h2 class="portico text-purple">Over ons</h2>
         <p><b>

@@ -16,8 +16,8 @@
         </div>
         <div class="nav-end">
           <li>
-            <a v-if="!this.$auth.loggedIn" @click="$auth.loginWith('aad')">Log in</a>
-            <a v-else="" @click="$auth.logout('aad')">Log uit</a>
+            <a class="nav-login" v-if="!this.$auth.loggedIn" @click="$auth.loginWith('aad')">Log in</a>
+            <a class="nav-login" v-else="" @click="$auth.logout('aad')">Log uit</a>
           </li>
         </div>
       </ul>
@@ -96,7 +96,9 @@ header{
     color: white;
     box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.5);
 }
-
+.nav-login {
+  cursor: pointer;
+}
 header nav{
     position: relative;
     display: flex;
