@@ -225,5 +225,7 @@ header nav .branding{
     width: 3.5em;
     transition: .5s ease all;
 }
-
+header img {
+  transition: .5s ease all;
+}
 </style>
