@@ -187,12 +187,12 @@ header nav .branding{
 
 .icon i{
     cursor: pointer;
-    transition: 0.8s ease all;
+    transition: 0.5s ease all;
     transform: rotate(0deg);
 }
 
 .icon-active{
-    transition: 0.8s ease all;
+    transition: 0.5s ease all;
     transform: rotate(180deg);
 }
 
@@ -207,29 +207,26 @@ header nav .branding{
     top: 0;
     left: 0;
     transition: 0.8s ease all;
-
     z-index: 3;
 }
 
 .dropdown-nav li{
     margin-left: 0;
     transition: 0.8s ease all;
-
 }
 .mobile-nav {
-  transition: 0.8s ease all;
-
+    transition: 0.8s ease all;
 }
 
 .mobile-nav-leave-active {
-  transition: transform 1s ease;
+    transition: transform .3s ease;
 }
 .mobile-nav-enter-active {
-  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+    transition: all .3s cubic-bezier(1.0, 1.0, 1.0, 1.0);
 }
 .mobile-nav-enter, .mobile-nav-leave-to {
-  transition: transform 1s ease-in-out;
-  transform: translateX(-250px);
+    transition: transform .3s ease-in-out;
+    transform: translateX(-250px);
 }
 
 .scrolled-nav img{
