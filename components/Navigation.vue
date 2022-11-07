@@ -6,7 +6,7 @@
       </div>
       <ul v-show="!mobile" class="navigation my-auto">
         <div class="nav-start">
-          <li><a href="#">Home</a></li>
+          <li><a href="#">Home  </a></li>
           <li><a href="#">Inschrijven</a></li>
           <li><a href="#">Commissies</a></li>
           <li><a href="#">Activiteiten</a></li>
@@ -22,10 +22,10 @@
         </div>
       </ul>
       <div class="icon">
-        <fa @click="ToggleMobileNav" v-show="mobile" :class="{'icon-active' : mobileNav}" :icon="['fas', 'bars']" />
+        <font-awesome-icon v-if="mobile" @click="ToggleMobileNav"  :class="{'icon-active' : mobileNav}" icon="fa-solid fa-bars" />
       </div>
-      <transition name="mobile-nav">
-        <ul v-show="mobileNav" class="dropdown-nav">
+      <transition name="mobile-nav" appear>
+        <ul v-if="mobileNav" class="dropdown-nav">
           <li><a href="#">Home</a></li>
           <li><a href="#">Commissies</a></li>
           <li><a href="#">Activiteiten</a></li>
@@ -37,7 +37,14 @@
 </template>
 
 <script>
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+
 export default {
+  components: {
+    FontAwesomeIcon
+  },
   data(){
     return {
       scrolledNav: null,
@@ -48,6 +55,7 @@ export default {
   },
   created(){
     if (process.browser){
+      library.add(faBars)
       window.addEventListener('resize', this.CheckScreen)
     }
   },
@@ -198,27 +206,33 @@ header nav .branding{
     background-color: #39203B;
     top: 0;
     left: 0;
+    transition: 0.8s ease all;
+
     z-index: 3;
 }
 
 .dropdown-nav li{
     margin-left: 0;
+    transition: 0.8s ease all;
+
+}
+.mobile-nav {
+  transition: 0.8s ease all;
+
 }
 
-.mobile-nav-enter-active,
-.mobile-nav-leave-active{
-    transition: 1s ease all;
+.mobile-nav-leave-active {
+  transition: transform 1s ease;
 }
-
-.mobile-nav-enter-from,
-.mobile-nav-leave-to{
-    transition: 1s ease all;
-    transform: translateX(-250px);
+.mobile-nav-enter-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
 }
-
-.mobile-nav-enter-to{
-    transition: 1s ease all;
-    transform: translateX(0);;
+/* .mobile-nav-enter {
+  transform: translateX(0);
+} */
+.mobile-nav-enter, .mobile-nav-leave-to {
+  transition: transform 1s ease-in-out;
+  transform: translateX(-250px);
 }
 
 .scrolled-nav img{
