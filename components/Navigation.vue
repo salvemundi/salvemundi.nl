@@ -227,9 +227,6 @@ header nav .branding{
 .mobile-nav-enter-active {
   transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
 }
-/* .mobile-nav-enter {
-  transform: translateX(0);
-} */
 .mobile-nav-enter, .mobile-nav-leave-to {
   transition: transform 1s ease-in-out;
   transform: translateX(-250px);
