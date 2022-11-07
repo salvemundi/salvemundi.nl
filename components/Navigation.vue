@@ -6,7 +6,7 @@
       </div>
       <ul v-show="!mobile" class="navigation my-auto">
         <div class="nav-start">
-          <li><a href="#">Home  </a></li>
+          <li><a href="#">Home</a></li>
           <li><a href="#">Inschrijven</a></li>
           <li><a href="#">Commissies</a></li>
           <li><a href="#">Activiteiten</a></li>
