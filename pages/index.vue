@@ -3,8 +3,11 @@
     <NextActivity />
     <b-row class="mx-5 my-3">
       <b-col>
+        <h1 class="portico text-purple" v-if="jwt_decoded != null">Welkom {{ jwt_decoded.name }}!</h1>
+
         <h2 class="portico text-purple">Over ons</h2>
         <p><b>
+
           Salve Mundi is de studievereniging van Fontys Hogenscholen ICT, opgericht in 2017 door Mohammed Mighiss en Luuk Hendriks. Salve Mundi is Latijn voor "Hello World", een typische zin die menig programmeur maar al te goed kent.
         </b></p>
         <p>
@@ -65,7 +68,15 @@ export default {
   components:{
     TitleBlock,
     NextActivity
-},
+  },
+  asyncData (context) {
+    return {
+      jwt_decoded: context.app.$auth.$storage.getUniversal('jwt_decoded')
+    }
+  },
+  data () {
+    return { jwt_decoded: null }
+  },
   head() {
     return {
       title: "Salve Mundi - Welcome",
@@ -80,6 +91,8 @@ export default {
     };
   },
 };
+
+
 </script>
 
 <style>

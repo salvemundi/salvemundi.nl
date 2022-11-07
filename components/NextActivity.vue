@@ -5,7 +5,7 @@
                 <h2 class="portico">Volgende Activiteit:</h2>
                 <h3 class="mb-3">Bierproeverij</h3>
                 <no-ssr>
-                    <flip-countdown deadline="2022-10-26 15:00:00"></flip-countdown>
+                    <flip-countdown deadline="2022-11-26 15:00:00"></flip-countdown>
                 </no-ssr>
             </div>
         </div>

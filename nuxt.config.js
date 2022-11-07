@@ -55,14 +55,14 @@ export default {
   auth: {
     redirect: {
       login: '/',
-      callback: '/callback'
+      callback: '/auth'
     },
     strategies: {
       aad: {
         scheme: 'oauth2',
         endpoints: {
-          authorization: 'https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize',
-          token: 'https://login.microsoftonline.com/organizations/oauth2/v2.0/token',
+          authorization: 'https://login.microsoftonline.com/salvemundi.onmicrosoft.com/oauth2/v2.0/authorize',
+          token: 'https://login.microsoftonline.com/salvemundi.onmicrosoft.com/oauth2/v2.0/token',
           userInfo: '',
           logout: '/'
         },

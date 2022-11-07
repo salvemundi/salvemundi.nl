@@ -23,7 +23,12 @@ export default {
     components:{
         Navigation,
         Footer
+    },
+    methods: {
+    showAlert: (message) => {
+      alert(message)
     }
+  }
 }
 </script>
 
