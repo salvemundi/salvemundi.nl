@@ -5,6 +5,7 @@
 ```bash
 # install dependencies
 $ npm install
+$ npm install --save vue2-flip-countdown
 
 # serve with hot reload at localhost:3000
 $ npm run dev
