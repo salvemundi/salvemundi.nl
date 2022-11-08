@@ -37,7 +37,10 @@ export default {
   font-family: 'Portico-Rounded';
   src: local("Portico-Rounded"), url('~/assets/fonts/Portico-Rounded.woff')  format('woff');
 }
-
+@font-face {
+  font-family: 'Century Gothic';
+  src: local("Century Gothic"), url('~/assets/fonts/gothic.woff')  format('woff');
+}
 
 .portico{
     font-family: "Portico-Rounded",serif;
@@ -45,7 +48,7 @@ export default {
 }
 
 body{
-    font-family: "Century gothic",serif;
+    font-family: "Century gothic" ,serif;
 }
 
 #navigationIcon{
