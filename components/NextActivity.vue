@@ -1,11 +1,11 @@
 <template>
     <div class="up">
         <div class="next-activity">
-            <div class="turn-back py-5 text-center">
+            <div class="turn-back py-5 text-center countdown">
                 <h2 class="portico">Volgende Activiteit:</h2>
                 <h3 class="mb-3">Bierproeverij</h3>
                 <no-ssr>
-                    <flip-countdown deadline="2022-11-26 15:00:00"></flip-countdown>
+                    <flip-countdown class="" deadline="2022-11-26 15:00:00"></flip-countdown>
                 </no-ssr>
             </div>
         </div>
@@ -59,10 +59,13 @@ export default {
     width: 100%;
     z-index: 34;
 }
-
+.countdown {
+  zoom: 1.8;
+}
 .up{
+    /* background-color: #6a0763; */
     position: relative;
-    transform: translateY(-6em);
+    transform: translateY(-12em);
     z-index: 30;
 }
 
@@ -105,6 +108,9 @@ export default {
         transform: translateY(-1.2em);
         z-index: 30;
     }
+    .countdown {
+      zoom: 1.3;
+    }
 }
 
 
@@ -113,6 +119,9 @@ export default {
         position: relative;
         transform: translateY(-1em);
         z-index: 30;
+    }
+    .countdown {
+      zoom: 1.0;
     }
 }
 

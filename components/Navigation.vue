@@ -6,7 +6,7 @@
       </div>
       <ul v-show="!mobile" class="navigation my-auto">
         <div class="nav-start">
-          <li><a href="#">Home</a></li>
+          <li><a class="active" href="#">Home</a></li>
           <li><a href="#">Inschrijven</a></li>
           <li><a href="#">Commissies</a></li>
           <li><a href="#">Activiteiten</a></li>
@@ -17,7 +17,11 @@
         <div class="nav-end">
           <li>
             <a class="nav-login" v-if="!this.$auth.loggedIn" @click="$auth.loginWith('aad')">Log in</a>
-            <a class="nav-login" v-else="" @click="$auth.logout('aad')">Log uit</a>
+            <a class="nav-login" v-else="" @click="$auth.logout('aad')">
+              Mijn account
+              <font-awesome-icon icon="fa-solid fa-chevron-down" />
+            </a>
+
           </li>
         </div>
       </ul>
@@ -39,7 +43,7 @@
 <script>
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
 export default {
   components: {
@@ -56,6 +60,7 @@ export default {
   created(){
     if (process.browser){
       library.add(faBars)
+      library.add(faChevronDown)
       window.addEventListener('resize', this.CheckScreen)
     }
   },
@@ -94,7 +99,9 @@ export default {
 </script>
 
 <style>
-
+.active {
+  opacity: 100%;
+}
 header{
     background-color: #663366;
     z-index: 99;
@@ -136,12 +143,14 @@ header a{
     border-bottom: 1px solid transparent;
     text-decoration: none;
     color: white;
+    opacity: 75%;
 }
 
 header nav a:hover{
-    color: plum;
-    border-color: plum;
-    text-decoration: none;
+    color: white;
+    text-decoration: none !important;
+    opacity: 100%;
+
 }
 
 header nav .branding{
@@ -155,6 +164,7 @@ header nav .branding{
 .branding img{
     width: 5em;
     transition: .5 ease all;
+    opacity: 75%;
 }
 
 .navigation{

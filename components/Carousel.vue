@@ -61,7 +61,7 @@
 <style>
 
 .headerImg{
-    max-height: 35em;
+    max-height: 50em;
     z-index: 1;
 }
 

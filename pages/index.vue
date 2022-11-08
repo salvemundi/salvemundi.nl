@@ -1,7 +1,7 @@
 <template>
   <div>
     <NextActivity />
-    <b-row class="mx-5 my-3">
+    <b-row class="skewed mx-5 my-3">
       <b-col>
         <h1 class="portico text-purple" v-if="jwt != null && jwt.length > 1">Welkom {{ decodedToken(jwt).name }}!</h1>
 
@@ -55,7 +55,7 @@
 
     <TitleBlock Title="Commissies" Content="bla bla bla text enzo"></TitleBlock>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aut asperiores error impedit, architecto excepturi quod est. Nostrum, eaque atque commodi sit nesciunt minima veritatis, enim eius a eligendi hic?
-    
+
   </div>
 </template>
 
@@ -104,6 +104,9 @@ export default {
 </script>
 
 <style>
+/* .skewed {
+  margin-top: 2% !important;
+} */
 .text-purple{
   color: #663366;
 }
