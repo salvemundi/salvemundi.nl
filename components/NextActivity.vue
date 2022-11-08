@@ -59,9 +59,7 @@ export default {
     width: 100%;
     z-index: 34;
 }
-.countdown {
-  zoom: 1.8;
-}
+
 .up{
     /* background-color: #6a0763; */
     position: relative;
@@ -72,6 +70,13 @@ export default {
 .up .container{
     padding: 0 !important;
 }
+
+@media only screen and (min-width: 3500px){
+  .countdown {
+    zoom: 1.8 !important;
+  }
+}
+
 
 @media only screen and (max-width: 1000px){
     .up{
@@ -89,7 +94,9 @@ export default {
         transform: translateY(-5em);
 
     }
-
+    .countdown {
+      zoom: 1.0;
+    }
 }
 
 
@@ -109,7 +116,7 @@ export default {
         z-index: 30;
     }
     .countdown {
-      zoom: 1.3;
+      zoom: 1.0;
     }
 }
 
