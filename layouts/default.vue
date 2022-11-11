@@ -1,5 +1,5 @@
 <template>
-    <v-app>
+    <v-app v-if="!loading">
         <v-app-bar>
             <Navigation />
             <Carousel />
@@ -20,6 +20,14 @@ import Navigation from '../components/Navigation.vue';
 import Footer from '../components/Footer.vue';
 
 export default {
+    data: () => ({
+        loading: true
+    }),
+    created() {
+        this.$nextTick(function() {
+            this.loading = false
+        })
+    },
     components:{
         Navigation,
         Footer
