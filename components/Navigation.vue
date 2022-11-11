@@ -100,7 +100,7 @@ export default {
 
 <style>
 .active {
-  opacity: 100%;
+  opacity: 1;
 }
 header{
     background-color: #663366;
@@ -143,13 +143,13 @@ header a{
     border-bottom: 1px solid transparent;
     text-decoration: none;
     color: white;
-    opacity: 75%;
+    opacity: 0.75;
 }
 
 header nav a:hover{
     color: white;
     text-decoration: none !important;
-    opacity: 100%;
+    opacity: 1;
 
 }
 
@@ -164,7 +164,7 @@ header nav .branding{
 .branding img{
     width: 5em;
     transition: .5 ease all;
-    opacity: 75%;
+    opacity: 0.75;
 }
 
 .navigation{
