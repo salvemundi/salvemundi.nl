@@ -14,7 +14,7 @@
           De vereniging organiseert veel activiteiten, zowel studiebemiddelend als voor de lol, of een combinatie van de twee. Denk hierbij aan bijvoorbeeld bijlessen, workshops maar ook bijvoorbeeld karten, kanoën of naar de Efteling!
         </p>
         <p>
-          Naast deze activiteiten verzorgt Salve Mundi ook de introductie van FHICT van top tot teen.
+          Naast deze activiteiten verzorgt Salve Mundi ook de introductie van FHICT van top tot teen!
         </p>
       </b-col>
       <b-col sm="5">
