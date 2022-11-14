@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-5">
+  <div class="pt-5 mobile">
     <b-carousel
       id="carousel-1"
       v-model="slide"
@@ -10,7 +10,7 @@
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
     >
-    <div class="overlay d-flex align-items-center justify-content-center text-center">
+    <div class="overlay d-flex align-items-center justify-content-center text-center parent-text">
       <h1 class="white py-auto">
         <p class="portico big">
           Salve Mundi
@@ -59,8 +59,8 @@
 </script>
 
 <style>
-
 .headerImg{
+    height: 100% !important;
     max-height: 80em;
     z-index: 1;
 }
@@ -103,6 +103,19 @@
   .overlay h1{
     font-size: 25px;
   }
+  .headerImg {
+    justify-content: center !important;
+    align-items: center !important;
+    display: flex !important;
+    transform: scale(2.4) !important;
+  }
+  .mobile {
+    height: 400px;
+  }
+  .carousel,
+  .carousel-inner {
+    height: 100% !important;
+  }
 }
 
 
@@ -115,6 +128,19 @@
     font-size: 15px;
   }
 
+  .headerImg {
+    justify-content: center !important;
+    align-items: center !important;
+    display: flex !important;
+    transform: scale(3) !important;
+  }
+  .mobile {
+    height: 400px;
+  }
+  .carousel,
+  .carousel-inner {
+    height: 100% !important;
+  }
 }
 
 

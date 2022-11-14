@@ -54,9 +54,20 @@ export default {
     font-family: "Portico-Rounded",serif;
     letter-spacing: 2px;
 }
+* {
+    margin: 0;
+}
+html,
+body {
+  font-family: "Century gothic" ,serif;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+}
 
-body{
-    font-family: "Century gothic" ,serif;
+#app {
+  height: inherit;
+  width: inherit;
 }
 
 #navigationIcon{

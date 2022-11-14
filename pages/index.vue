@@ -1,8 +1,8 @@
 <template>
   <div>
     <NextActivity />
-    <b-row class="skewed mx-5 my-3">
-      <b-col>
+    <b-row class="skewed mx-3 my-3">
+      <b-col sm="7">
         <h1 class="portico text-purple" v-if="jwt != null && jwt.length > 1">Welkom {{ decodedToken(jwt).name }}!</h1>
 
         <h2 class="portico text-purple">Over ons</h2>
@@ -17,7 +17,7 @@
           Naast deze activiteiten verzorgt Salve Mundi ook de introductie van FHICT van top tot teen.
         </p>
       </b-col>
-      <b-col>
+      <b-col sm="5">
         <img src="../assets/img/HeaderImgs/Foto1.jpg" class="w-100" alt="">
       </b-col>
     </b-row>
@@ -35,17 +35,17 @@
     </b-row>
 
     <div class="intro-heigt">
-      <div class="overlay">
+      <div class="overlay intro-height">
         <div class="p-5S box">
-          <h2 class="portico">Introductie</h2>
-          <p>
+          <h2 class="portico box-text-title">Introductie</h2>
+          <p class="box-text">
             Ga jij bij Fontys ICT studeren? En ben jij op zoek naar het echte studentenleven in Eindhoven? Dan is de introductie misschien wel iets voor jou!
           </p>
-          <p>
+          <p class="box-text">
             Salve Mundi organiseert jaarlijks een introductieweek: De FHICT-introductie. Het is een week vol avontuur en teambuilding in Eindhoven en omstreken. Zo leer je ook de stad beter kennen. Salve Mundi is druk bezig geweest om dit allemaal mogelijk te maken voor de nieuwe studenten dit jaar.
           </p>
-          <div>
-            <a href="btn btn-primary">Meer informatie -></a>
+          <div class="box-text">
+            <a class="btn btn-primary">Meer informatie -></a>
           </div>
         </div>
       </div>
@@ -123,6 +123,7 @@ video{
 
 .bigger{
   font-size: 200%;
+  text-align: center;
 }
 
 .intro-foto{
@@ -142,7 +143,20 @@ video{
 .box{
   background-color: white;
   z-index: 4;
-  margin: 10em;
+  max-height: 75% !important;
+  max-width: 75% !important;
+  overflow: scroll;
+  border-radius: .5rem;
 }
-
+.overlay {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.box-text {
+  padding: 1em 1em 1em 1em;
+}
+.box-text-title {
+  padding: 1em 1em 1em 0.5em;
+}
 </style>
