@@ -145,7 +145,6 @@ video{
   z-index: 4;
   max-height: 75% !important;
   max-width: 75% !important;
-  overflow: scroll;
   border-radius: .5rem;
 }
 .overlay {
@@ -158,5 +157,12 @@ video{
 }
 .box-text-title {
   padding: 1em 1em 1em 0.5em;
+}
+
+@media only screen and (max-width:600px) {
+  .box {
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
 }
 </style>
