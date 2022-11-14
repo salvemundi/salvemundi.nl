@@ -1,7 +1,7 @@
 <template>
     <div class="turned">
         <div class="purple text-center p-5">
-            <div style="max-width: 800px" class="mx-auto">
+            <div class="mx-auto">
                 <h1 style="font-size: 30px;" class="portico"><b>{{ Title }}</b></h1>
                 <p>{{ Content }}</p>
             </div>
@@ -21,14 +21,12 @@ export default {
 
 
 <style>
-
-
 .turned{
     background-color: #93138A;
     transform: skewY(-2.55deg);
     width: 100%;
-    margin-bottom: 3em;
-    margin-top: 3em;
+    margin-bottom: 3em !important;
+    margin-top: 0 !important;
     z-index: 34;
 }
 .purple{

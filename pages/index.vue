@@ -45,7 +45,7 @@
             Salve Mundi organiseert jaarlijks een introductieweek: De FHICT-introductie. Het is een week vol avontuur en teambuilding in Eindhoven en omstreken. Zo leer je ook de stad beter kennen. Salve Mundi is druk bezig geweest om dit allemaal mogelijk te maken voor de nieuwe studenten dit jaar.
           </p>
           <div class="box-text">
-            <a class="btn btn-primary">Meer informatie -></a>
+            <a class="btn btn-primary">Meer informatie <font-awesome-icon icon="fa-solid fa-chevron-right" /></a>
           </div>
         </div>
       </div>
@@ -65,10 +65,21 @@ import TitleBlock from '../components/TitleBlock.vue';
 import NextActivity from '../components/NextActivity.vue';
 import jwt_decode from 'jwt-decode'
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
+
 export default {
   components:{
     TitleBlock,
-    NextActivity
+    NextActivity,
+    FontAwesomeIcon
+  },
+  created(){
+    if (process.browser){
+      library.add(faChevronRight)
+      window.addEventListener('resize', this.CheckScreen)
+    }
   },
   asyncData (context) {
     return {
@@ -153,10 +164,11 @@ video{
   display: flex;
 }
 .box-text {
-  padding: 1em 1em 1em 1em;
+  padding: 1em;
 }
 .box-text-title {
-  padding: 1em 1em 1em 0.5em;
+  padding: 1em;
+  padding-left: 0.5em;
 }
 
 @media only screen and (max-width:600px) {

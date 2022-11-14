@@ -61,7 +61,7 @@ html,
 body {
   font-family: "Century gothic" ,serif;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   margin: 0;
 }
 
@@ -78,5 +78,19 @@ body {
 
 .row{
     margin: 0;
+}
+
+.btn-primary {
+    background-color: #663363 !important;
+    outline-color: #8a4285 !important;
+    border-color: #8a4285 !important;
+}
+
+.btn-primary:hover {
+    background-color: #50284d !important;
+}
+::selection {
+  background: #ba5eb8;
+  color: white;
 }
 </style>
