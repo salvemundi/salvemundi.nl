@@ -62,11 +62,12 @@ export default {
       library.add(faBars)
       library.add(faChevronDown)
       window.addEventListener('resize', this.CheckScreen)
+      window.addEventListener('scroll', this.UpdateScroll)
+      this.CheckScreen();
     }
   },
   mounted(){
     if (process.browser){
-      window.addEventListener('scroll', this.UpdateScroll)
     }
   },
   methods:{
