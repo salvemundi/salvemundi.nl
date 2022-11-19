@@ -96,21 +96,15 @@
   }
 }
 
-@media only screen and (max-width: 500px){
-  .big{
-    font-size: 35px;
+@media only screen and (max-width: 600px){
+  .mobile {
+    height: 300px;
   }
-  .overlay h1{
-    font-size: 25px;
-  }
-  .headerImg {
+  .headerImg{
     justify-content: center !important;
     align-items: center !important;
     display: flex !important;
     transform: scale(2.4) !important;
-  }
-  .mobile {
-    height: 400px;
   }
   .carousel,
   .carousel-inner {
@@ -118,6 +112,14 @@
   }
 }
 
+@media only screen and (max-width: 500px){
+  .big{
+    font-size: 35px;
+  }
+  .overlay h1{
+    font-size: 25px;
+  }
+}
 
 @media only screen and (max-width: 400px){
   .big{
@@ -126,20 +128,6 @@
   }
   .overlay h1{
     font-size: 15px;
-  }
-
-  .headerImg {
-    justify-content: center !important;
-    align-items: center !important;
-    display: flex !important;
-    transform: scale(3) !important;
-  }
-  .mobile {
-    height: 400px;
-  }
-  .carousel,
-  .carousel-inner {
-    height: 100% !important;
   }
 }
 

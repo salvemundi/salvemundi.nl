@@ -5,7 +5,7 @@
                 <h2 class="portico">Volgende Activiteit:</h2>
                 <h3 class="mb-3">Bierproeverij</h3>
                 <no-ssr>
-                    <flip-countdown class="" deadline="2022-11-26 15:00:00"></flip-countdown>
+                    <flip-countdown deadline="2022-11-26 15:00:00"></flip-countdown>
                 </no-ssr>
             </div>
         </div>
@@ -71,7 +71,7 @@ export default {
     padding: 0 !important;
 }
 
-@media only screen and (min-width: 3500px){
+@media only screen and (min-width: 2500px){
   .countdown {
     zoom: 1.8 !important;
   }
@@ -94,9 +94,6 @@ export default {
         transform: translateY(-5em);
 
     }
-    .countdown {
-      zoom: 1.0;
-    }
 }
 
 
@@ -115,9 +112,6 @@ export default {
         transform: translateY(-1.2em);
         z-index: 30;
     }
-    .countdown {
-      zoom: 1.0;
-    }
 }
 
 
@@ -126,9 +120,6 @@ export default {
         position: relative;
         transform: translateY(-1em);
         z-index: 30;
-    }
-    .countdown {
-      zoom: 1.0;
     }
 }
 

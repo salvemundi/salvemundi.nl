@@ -1,7 +1,7 @@
 <template>
     <div class="turned">
         <div class="purple text-center p-5">
-            <div class="mx-auto">
+            <div class="max-width mx-auto">
                 <h1 style="font-size: 30px;" class="portico"><b>{{ Title }}</b></h1>
                 <p>{{ Content }}</p>
             </div>
@@ -34,5 +34,9 @@ export default {
     transform: skewY(2.55deg);
     color: white;
     width: 100%;
+    z-index: 35;
+}
+.max-width{
+    max-width: 1200px;
 }
 </style>

@@ -17,7 +17,7 @@
         <div class="nav-end">
           <li>
             <a class="nav-login" v-if="!this.$auth.loggedIn" @click="$auth.loginWith('aad')">Log in</a>
-            <a class="nav-login" v-else="" @click="$auth.logout('aad')">
+            <a class="nav-login" v-else @click="$auth.logout('aad')">
               Mijn account
               <font-awesome-icon icon="fa-solid fa-chevron-down" />
             </a>
@@ -66,10 +66,6 @@ export default {
       this.CheckScreen();
     }
   },
-  mounted(){
-    if (process.browser){
-    }
-  },
   methods:{
     ToggleMobileNav(){
       this.mobileNav = !this.mobileNav;
@@ -101,7 +97,7 @@ export default {
 
 <style>
 .active {
-  opacity: 1;
+  opacity: .75;
 }
 header{
     background-color: #663366;
@@ -112,9 +108,11 @@ header{
     color: white;
     box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.5);
 }
+
 .nav-login {
   cursor: pointer;
 }
+
 header nav{
     position: relative;
     display: flex;
@@ -144,13 +142,13 @@ header a{
     border-bottom: 1px solid transparent;
     text-decoration: none;
     color: white;
-    opacity: 0.75;
+    opacity: 1;
 }
 
 header nav a:hover{
     color: white;
     text-decoration: none !important;
-    opacity: 1;
+    opacity: .75;
 
 }
 
@@ -165,7 +163,7 @@ header nav .branding{
 .branding img{
     width: 5em;
     transition: .5 ease all;
-    opacity: 0.75;
+    opacity: 1;
 }
 
 .navigation{

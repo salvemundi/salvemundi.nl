@@ -36,16 +36,16 @@
 
     <div class="intro-heigt">
       <div class="overlay intro-height">
-        <div class="p-5S box">
-          <h2 class="portico box-text-title">Introductie</h2>
-          <p class="box-text">
+        <div class="p-5 box">
+          <h2 class="portico title">Introductie</h2>
+          <p>
             Ga jij bij Fontys ICT studeren? En ben jij op zoek naar het echte studentenleven in Eindhoven? Dan is de introductie misschien wel iets voor jou!
           </p>
-          <p class="box-text">
+          <p>
             Salve Mundi organiseert jaarlijks een introductieweek: De FHICT-introductie. Het is een week vol avontuur en teambuilding in Eindhoven en omstreken, zo leer je ook de stad beter kennen. Salve Mundi is druk bezig geweest om dit allemaal mogelijk te maken voor de nieuwe studenten dit jaar.
           </p>
-          <div class="box-text">
-            <a class="btn btn-primary">Meer informatie <font-awesome-icon icon="fa-solid fa-chevron-right" /></a>
+          <div class="">
+            <a class="btn btn-primary float-right">Meer informatie <font-awesome-icon icon="fa-solid fa-chevron-right" /></a>
           </div>
         </div>
       </div>
@@ -53,8 +53,10 @@
 
     </div>
 
-    <TitleBlock Title="Commissies" Content="bla bla bla text enzo"></TitleBlock>
+    <TitleBlock Title="Commissies" Content="bla bla bla text enzo     Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae amet voluptatem qui minus quis odio eius aliquid eaque itaque necessitatibus? Iure facilis nemo ex minus praesentium maiores ducimus debitis, architecto laborum adipisci ipsa beatae quisquam dicta enim, id vitae explicabo totam dolore inventore sit rerum quibusdam vel. Deleniti provident excepturi porro quisquam obcaecati impedit exercitationem illum, ut repellendus accusamus ipsum, recusandae necessitatibus sequi. At atque fuga nostrum reiciendis veniam aspernatur molestias molestiae mollitia minima animi? Facilis assumenda ratione magnam vel totam, quos iure aperiam blanditiis? Vel consequatur reprehenderit iste ratione facilis? Ipsam laudantium, tempora ipsa libero at quis necessitatibus omnis quisquam vel nostrum, perspiciatis aut ex repellat. Assumenda eius nam quas doloribus voluptate blanditiis inventore eum explicabo expedita, aspernatur quaerat consectetur autem a, eos magnam facilis, temporibus est ratione architecto culpa obcaecati? Ipsa dicta porro corporis quo laudantium quidem suscipit eveniet! Placeat, nesciunt! Perspiciatis quis sapiente id. Adipisci nam numquam necessitatibus temporibus, iure alias. Soluta ducimus a rem eum? Quas animi illo ex sit quae maxime reiciendis, molestias voluptas aliquid atque iure minus officiis cupiditate nemo nulla sapiente reprehenderit nihil maiores dolor a tenetur accusantium. Facere voluptate, sed saepe eveniet commodi temporibus odit a tenetur quas suscipit eligendi, non nesciunt dolor? Consectetur cumque tenetur ullam cupiditate voluptate aliquid, voluptatibus, similique sed molestias, ab dolore excepturi doloremque animi odio perspiciatis veritatis odit! Sit, quas dignissimos? Ipsa ipsum magnam itaque accusantium molestiae cupiditate modi quaerat placeat ullam cumque, quis nam tenetur dolor incidunt quidem vel id. Commodi enim ex ipsum voluptatum natus quas nobis nulla laborum, fuga velit ad officiis! Eveniet eaque numquam inventore alias, molestiae non sunt, cupiditate labore quis quidem quas minima accusantium, placeat delectus a dolore. Molestiae assumenda aut repellendus sint? Perferendis iusto harum odit voluptates, dolore illum beatae natus sint voluptate magnam sapiente eaque laborum tenetur ducimus facilis.
+"></TitleBlock>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aut asperiores error impedit, architecto excepturi quod est. Nostrum, eaque atque commodi sit nesciunt minima veritatis, enim eius a eligendi hic?
+
 
   </div>
 </template>
@@ -115,9 +117,7 @@ export default {
 </script>
 
 <style>
-/* .skewed {
-  margin-top: 2% !important;
-} */
+
 .text-purple{
   color: #663366;
 }
@@ -156,19 +156,22 @@ video{
   z-index: 4;
   max-height: 75% !important;
   max-width: 75% !important;
-  border-radius: .5rem;
 }
 .overlay {
   justify-content: center;
   align-items: center;
   display: flex;
 }
-.box-text {
-  padding: 1em;
+
+.title{
+  font-size: 35px;
 }
-.box-text-title {
-  padding: 1em;
-  padding-left: 0.5em;
+
+@media only screen and (max-width:400px) {
+ .title{
+    margin-top: 1em;
+    font-size: 20px;
+ }
 }
 
 @media only screen and (max-width:600px) {

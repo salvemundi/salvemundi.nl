@@ -81,13 +81,14 @@ body {
 }
 
 .btn-primary {
-    background-color: #663363 !important;
+    /* background-color: #663363 !important; */
     outline-color: #8a4285 !important;
     border-color: #8a4285 !important;
+    background: linear-gradient(to right, #7C3A77, #8A1882);
 }
 
 .btn-primary:hover {
-    background-color: #50284d !important;
+    background: linear-gradient(to right, #72356E, #7C3A77);
 }
 ::selection {
   background: #ba5eb8;
