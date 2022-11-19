@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-5">
+  <div class="pt-5 mobile">
     <b-carousel
       id="carousel-1"
       v-model="slide"
@@ -59,9 +59,9 @@
 </script>
 
 <style>
-
 .headerImg{
-    max-height: 35em;
+    height: 100% !important;
+    max-height: 80em;
     z-index: 1;
 }
 
@@ -96,6 +96,22 @@
   }
 }
 
+@media only screen and (max-width: 600px){
+  .mobile {
+    height: 300px;
+  }
+  .headerImg{
+    justify-content: center !important;
+    align-items: center !important;
+    display: flex !important;
+    transform: scale(2.4) !important;
+  }
+  .carousel,
+  .carousel-inner {
+    height: 100% !important;
+  }
+}
+
 @media only screen and (max-width: 500px){
   .big{
     font-size: 35px;
@@ -105,7 +121,6 @@
   }
 }
 
-
 @media only screen and (max-width: 400px){
   .big{
     margin-top: 1em;
@@ -114,7 +129,6 @@
   .overlay h1{
     font-size: 15px;
   }
-
 }
 
 

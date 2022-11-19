@@ -6,7 +6,7 @@
       </div>
       <ul v-show="!mobile" class="navigation my-auto">
         <div class="nav-start">
-          <li><a href="#">Home</a></li>
+          <li><a class="active" href="#">Home</a></li>
           <li><a href="#">Inschrijven</a></li>
           <li><a href="#">Commissies</a></li>
           <li><a href="#">Activiteiten</a></li>
@@ -15,14 +15,21 @@
           <li><a href="#">Merch</a></li>
         </div>
         <div class="nav-end">
-          <li><a href="#">Login</a></li>
+          <li>
+            <a class="nav-login" v-if="!this.$auth.loggedIn" @click="$auth.loginWith('aad')">Log in</a>
+            <a class="nav-login" v-else @click="$auth.logout('aad')">
+              Mijn account
+              <font-awesome-icon icon="fa-solid fa-chevron-down" />
+            </a>
+
+          </li>
         </div>
       </ul>
       <div class="icon">
-        <fa @click="ToggleMobileNav" v-show="mobile" :class="{'icon-active' : mobileNav}" :icon="['fas', 'bars']" />
+        <font-awesome-icon v-if="mobile" @click="ToggleMobileNav"  :class="{'icon-active' : mobileNav}" icon="fa-solid fa-bars" />
       </div>
-      <transition name="mobile-nav">
-        <ul v-show="mobileNav" class="dropdown-nav">
+      <transition name="mobile-nav" appear>
+        <ul v-if="mobileNav" class="dropdown-nav">
           <li><a href="#">Home</a></li>
           <li><a href="#">Commissies</a></li>
           <li><a href="#">Activiteiten</a></li>
@@ -34,7 +41,14 @@
 </template>
 
 <script>
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { faBars, faChevronDown } from '@fortawesome/free-solid-svg-icons'
+
 export default {
+  components: {
+    FontAwesomeIcon
+  },
   data(){
     return {
       scrolledNav: null,
@@ -45,12 +59,11 @@ export default {
   },
   created(){
     if (process.browser){
+      library.add(faBars)
+      library.add(faChevronDown)
       window.addEventListener('resize', this.CheckScreen)
-    }
-  },
-  mounted(){
-    if (process.browser){
       window.addEventListener('scroll', this.UpdateScroll)
+      this.CheckScreen();
     }
   },
   methods:{
@@ -83,7 +96,9 @@ export default {
 </script>
 
 <style>
-
+.active {
+  opacity: .75;
+}
 header{
     background-color: #663366;
     z-index: 99;
@@ -92,6 +107,10 @@ header{
     transition: .5s ease all;
     color: white;
     box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.5);
+}
+
+.nav-login {
+  cursor: pointer;
 }
 
 header nav{
@@ -123,12 +142,14 @@ header a{
     border-bottom: 1px solid transparent;
     text-decoration: none;
     color: white;
+    opacity: 1;
 }
 
 header nav a:hover{
-    color: plum;
-    border-color: plum;
-    text-decoration: none;
+    color: white;
+    text-decoration: none !important;
+    opacity: .75;
+
 }
 
 header nav .branding{
@@ -142,6 +163,7 @@ header nav .branding{
 .branding img{
     width: 5em;
     transition: .5 ease all;
+    opacity: 1;
 }
 
 .navigation{
@@ -174,12 +196,12 @@ header nav .branding{
 
 .icon i{
     cursor: pointer;
-    transition: 0.8s ease all;
+    transition: 0.5s ease all;
     transform: rotate(0deg);
 }
 
 .icon-active{
-    transition: 0.8s ease all;
+    transition: 0.5s ease all;
     transform: rotate(180deg);
 }
 
@@ -193,32 +215,34 @@ header nav .branding{
     background-color: #39203B;
     top: 0;
     left: 0;
+    transition: 0.8s ease all;
     z-index: 3;
 }
 
 .dropdown-nav li{
     margin-left: 0;
+    transition: 0.8s ease all;
+}
+.mobile-nav {
+    transition: 0.8s ease all;
 }
 
-.mobile-nav-enter-active,
-.mobile-nav-leave-active{
-    transition: 1s ease all;
+.mobile-nav-leave-active {
+    transition: transform .3s ease;
 }
-
-.mobile-nav-enter-from,
-.mobile-nav-leave-to{
-    transition: 1s ease all;
+.mobile-nav-enter-active {
+    transition: all .3s cubic-bezier(1.0, 1.0, 1.0, 1.0);
+}
+.mobile-nav-enter, .mobile-nav-leave-to {
+    transition: transform .3s ease-in-out;
     transform: translateX(-250px);
-}
-
-.mobile-nav-enter-to{
-    transition: 1s ease all;
-    transform: translateX(0);;
 }
 
 .scrolled-nav img{
     width: 3.5em;
     transition: .5s ease all;
 }
-
+header img {
+  transition: .5s ease all;
+}
 </style>
