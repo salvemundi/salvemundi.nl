@@ -37,7 +37,7 @@
     <div class="intro-heigt">
       <div class="overlay intro-height">
         <div class="p-5 box">
-          <h2 class="portico title">Introductie</h2>
+          <h2 class="portico text-purple title">Introductie</h2>
           <p>
             Ga jij bij Fontys ICT studeren? En ben jij op zoek naar het echte studentenleven in Eindhoven? Dan is de introductie misschien wel iets voor jou!
           </p>

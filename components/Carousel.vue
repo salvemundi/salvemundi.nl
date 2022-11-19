@@ -10,7 +10,7 @@
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
     >
-    <div class="overlay d-flex align-items-center justify-content-center text-center parent-text">
+    <div class="overlay d-flex align-items-center justify-content-center text-center">
       <h1 class="white py-auto">
         <p class="portico big">
           Salve Mundi
