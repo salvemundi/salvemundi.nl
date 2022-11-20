@@ -37,7 +37,7 @@
     <div class="intro-heigt">
       <div class="overlay intro-height">
         <div class="p-5 box">
-          <h2 class="portico text-purple title">Introductie</h2>
+          <h2 class="portico text-purple title"><b>Introductie</b></h2>
           <p>
             Ga jij bij Fontys ICT studeren? En ben jij op zoek naar het echte studentenleven in Eindhoven? Dan is de introductie misschien wel iets voor jou!
           </p>
@@ -53,10 +53,44 @@
 
     </div>
 
-    <TitleBlock Title="Commissies" Content="bla bla bla text enzo     Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae amet voluptatem qui minus quis odio eius aliquid eaque itaque necessitatibus? Iure facilis nemo ex minus praesentium maiores ducimus debitis, architecto laborum adipisci ipsa beatae quisquam dicta enim, id vitae explicabo totam dolore inventore sit rerum quibusdam vel. Deleniti provident excepturi porro quisquam obcaecati impedit exercitationem illum, ut repellendus accusamus ipsum, recusandae necessitatibus sequi. At atque fuga nostrum reiciendis veniam aspernatur molestias molestiae mollitia minima animi? Facilis assumenda ratione magnam vel totam, quos iure aperiam blanditiis? Vel consequatur reprehenderit iste ratione facilis? Ipsam laudantium, tempora ipsa libero at quis necessitatibus omnis quisquam vel nostrum, perspiciatis aut ex repellat. Assumenda eius nam quas doloribus voluptate blanditiis inventore eum explicabo expedita, aspernatur quaerat consectetur autem a, eos magnam facilis, temporibus est ratione architecto culpa obcaecati? Ipsa dicta porro corporis quo laudantium quidem suscipit eveniet! Placeat, nesciunt! Perspiciatis quis sapiente id. Adipisci nam numquam necessitatibus temporibus, iure alias. Soluta ducimus a rem eum? Quas animi illo ex sit quae maxime reiciendis, molestias voluptas aliquid atque iure minus officiis cupiditate nemo nulla sapiente reprehenderit nihil maiores dolor a tenetur accusantium. Facere voluptate, sed saepe eveniet commodi temporibus odit a tenetur quas suscipit eligendi, non nesciunt dolor? Consectetur cumque tenetur ullam cupiditate voluptate aliquid, voluptatibus, similique sed molestias, ab dolore excepturi doloremque animi odio perspiciatis veritatis odit! Sit, quas dignissimos? Ipsa ipsum magnam itaque accusantium molestiae cupiditate modi quaerat placeat ullam cumque, quis nam tenetur dolor incidunt quidem vel id. Commodi enim ex ipsum voluptatum natus quas nobis nulla laborum, fuga velit ad officiis! Eveniet eaque numquam inventore alias, molestiae non sunt, cupiditate labore quis quidem quas minima accusantium, placeat delectus a dolore. Molestiae assumenda aut repellendus sint? Perferendis iusto harum odit voluptates, dolore illum beatae natus sint voluptate magnam sapiente eaque laborum tenetur ducimus facilis.
-"></TitleBlock>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aut asperiores error impedit, architecto excepturi quod est. Nostrum, eaque atque commodi sit nesciunt minima veritatis, enim eius a eligendi hic?
+    <TitleBlock Title="Commissies" Content="bla bla bla text enzo"></TitleBlock>
 
+    <div class="turned">
+        <div class="purple text-center p-5">
+            <div class="max-width mx-auto">
+                <b-row>
+                  <b-col lg="6" class="my-auto text-left">
+                    <h1 class="portico title"><b>Contact</b></h1>
+                    <p>
+                      Heb jij een vraag voor ons of wil je voor iets anders met ons in contact komen? Dat kan! Je kan ons bereiken op de volgende gegevens:
+                    </p>
+                    <p>
+                      Adres: Rachelsmolen 1, 5612MA Eindhoven, Lokaal R10 2.17 <br>
+                      E-mail: info@salvemundi.nl
+                    </p>
+                  </b-col>
+                  <b-col lg="6" class="mx-auto">
+                    <div class="mapouter mx-auto">
+                      <div class="gmap_canvas">
+                        <iframe class="iframe-is-kut" id="gmap_canvas" src="https://maps.google.com/maps?q=fontys%20r10&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                        <a href="https://123movies-a.com"></a><br>
+                        <a href="https://www.embedgooglemap.net">using google maps on your website</a>
+                      </div>
+                    </div>
+                  </b-col>
+                </b-row>
+            </div>
+        </div>
+    </div>
+
+    <div class="p-5 text-center">
+      <h2 class="portico text-purple title"><b>partners</b></h2>
+      <b-row>
+        <b-col>
+          
+        </b-col>
+      </b-row>
+    </div>
 
   </div>
 </template>
@@ -164,7 +198,7 @@ video{
 }
 
 .title{
-  font-size: 35px;
+  font-size: 30px;
 }
 
 @media only screen and (max-width:400px) {
@@ -180,4 +214,43 @@ video{
     overflow-x: hidden;
   }
 }
+
+.mapouter{
+  position:relative;
+  text-align:right;
+  height:250px;
+  width:500px;
+}
+
+.gmap_canvas {
+  overflow:hidden;
+  background:none!important;
+  height:250px;
+  width:500px;
+}
+
+.iframe-is-kut{
+  height:250px;
+  width:500px;
+}
+
+@media only screen and (max-width:600px) {
+  .mapouter, .gmap_canvas, .iframe-is-kut{
+    width:400px;
+  }
+}
+
+@media only screen and (max-width:500px) {
+  .mapouter, .gmap_canvas, .iframe-is-kut{
+    width:300px;
+  }
+}
+
+@media only screen and (max-width:400px) {
+  .mapouter, .gmap_canvas, .iframe-is-kut{
+    width:200px;
+  }
+}
+
+
 </style>

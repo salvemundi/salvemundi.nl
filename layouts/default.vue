@@ -88,7 +88,7 @@ body {
 }
 
 .btn-primary:hover {
-    background: linear-gradient(to right, #72356E, #7C3A77);
+    background: linear-gradient(to right, #662F63, #75156E);
 }
 ::selection {
   background: #ba5eb8;
