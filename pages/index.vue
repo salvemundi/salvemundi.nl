@@ -85,11 +85,25 @@
 
     <div class="p-5 text-center">
       <h2 class="portico text-purple title"><b>partners</b></h2>
-      <b-row>
-        <b-col>
-          
-        </b-col>
-      </b-row>
+      <div class="max-width mx-auto">
+        <VueSlickCarousel v-bind="settings">
+            <div>
+              <img class="carousel-size" src="../assets/img/Partners/1.png" alt="">
+            </div>
+            <div>
+              <img class="carousel-size" src="../assets/img/Partners/2.png" alt="">
+            </div>
+            <div>
+              <img class="carousel-size" src="../assets/img/Partners/3.png" alt="">
+            </div>
+            <div>
+              <img class="carousel-size" src="../assets/img/Partners/4.png" alt="">
+            </div>
+            <div>
+              <img class="carousel-size" src="../assets/img/Partners/5.png" alt="">
+            </div>
+        </VueSlickCarousel>
+      </div>
     </div>
 
   </div>
@@ -101,6 +115,11 @@ import TitleBlock from '../components/TitleBlock.vue';
 import NextActivity from '../components/NextActivity.vue';
 import jwt_decode from 'jwt-decode'
 
+import VueSlickCarousel from 'vue-slick-carousel'
+import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+// optional style for arrows & dots
+import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
+
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
@@ -109,7 +128,8 @@ export default {
   components:{
     TitleBlock,
     NextActivity,
-    FontAwesomeIcon
+    FontAwesomeIcon,
+    VueSlickCarousel
   },
   created(){
     if (process.browser){
@@ -123,7 +143,52 @@ export default {
     }
   },
   data () {
-    return { jwt: null }
+    return {
+      jwt: null,
+      settings: {
+        "dots": true,
+        "dotsClass": "slick-dots custom-dot-class",
+        "autoplay": true,
+        "autoplaySpeed": 2000,
+        "rows": 1,
+        "centerMode": true,
+        "focusOnSelect": true,
+        "infinite": true,
+        "slidesToShow": 3,
+        "speed": 500,
+        "mobileFirst":true,
+        "variableWidth": true,
+        "responsive": [
+          {
+            "breakpoint": 1024,
+            "settings": {
+              "slidesToShow": 3,
+              "slidesToScroll": 3,
+              "infinite": true,
+              "rows": 1,
+              "dots": true
+            }
+          },
+          {
+            "breakpoint": 600,
+            "settings": {
+              "slidesToShow": 2,
+              "slidesToScroll": 2,
+              "rows": 1,
+              "initialSlide": 2
+            }
+          },
+          {
+            "breakpoint": 480,
+            "settings": {
+              "slidesToShow": 1,
+              "rows": 1,
+              "slidesToScroll": 1
+            }
+          }
+        ]
+      }
+    }
   },
   methods: {
     decodedToken(jwt) {
@@ -252,5 +317,10 @@ video{
   }
 }
 
+.carousel-size{
+  margin: 1em;
+  max-height: 200px;
+  width: auto;
+}
 
 </style>
