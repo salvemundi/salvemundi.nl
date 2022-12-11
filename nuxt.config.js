@@ -52,6 +52,10 @@ export default {
     middleware: ['auth']
   },
 
+  server: {
+    port: 3001
+  },
+
   auth: {
     redirect: {
       login: '/',
